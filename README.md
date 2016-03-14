@@ -1,6 +1,8 @@
 kicks-and-giggles
 =================
 
-Scripts I made for fun.
+This is a modified version of the internet archive download script found from 
+http://emerging.commons.gc.cuny.edu/2014/03/downloading-items-internet-archive-collection-using-python/
 
-The poe-related files are for @MechanicalPoe, as detailed at http://emerging.commons.gc.cuny.edu/2013/10/making-twitter-bot-python-tutorial/
+Modified to use the updated API and include some error handling. I removed the rest of the files as not being needed.
+
