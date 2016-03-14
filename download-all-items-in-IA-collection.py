@@ -7,6 +7,7 @@
 ## !! will probably crash after 10 or so items !! feel free to edit the script to make it better for bigger collections
 ## See http://programminghistorian.org/lessons/data-mining-the-internet-archive for more detailed info
 import os
+import time
 import internetarchive as ia
 from internetarchive.session import ArchiveSession
 from internetarchive import get_item
