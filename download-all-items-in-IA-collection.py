@@ -8,19 +8,17 @@
 ## See http://programminghistorian.org/lessons/data-mining-the-internet-archive for more detailed info
 import os
 import time
+import sys
 import internetarchive as ia
 from internetarchive.session import ArchiveSession
 from internetarchive import get_item
 from internetarchive import download
-s = ArchiveSession()
-coll = ia.Search(s, 'collection:xxxxxxxx') #fill this in -- searches for the ID of a collection in IA
-## example of collection page: https://archive.org/details/johnjaycollegeofcriminaljustice
-## the collection ID for that page is johnjaycollegeofcriminaljustice
-## you can tell a page is a collection if it has a 'Spotlight Item' on the left
+
+search = ia.search_items('collection:%s' % sys.argv[1])
 
 num = 0
 
-for result in coll: #for all items in a collection
+for result in search: #for all items in a collection
     num = num + 1 #item count
     itemid = result['identifier']
     print 'Downloading: #' + str(num) + '\t' + itemid
